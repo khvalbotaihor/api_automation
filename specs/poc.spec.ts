@@ -16,43 +16,6 @@ const PostSchema = object({
 const PostsSchema = array(PostSchema)
 
 describe('POC Tests', () => {
-    describe('Date Tests', () => {
-        it('should demonstrate different date formats', () => {
-            const today = new Date()
-            
-            // Get current date in different formats
-            const currentDate = {
-                fullDate: today.toLocaleDateString(), // e.g., "5/2/2024"
-                year: today.getFullYear(), // e.g., 2024
-                month: today.getMonth() + 1, // 1-12
-                day: today.getDate(), // 1-31
-                dayOfWeek: today.getDay(), // 0-6 (Sunday-Saturday)
-                isoString: today.toISOString(), // e.g., "2024-05-02T12:34:56.789Z"
-                customFormat: `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}` // e.g., "2024-05-02"
-            }
-
-            console.log('\n=== Current Date Information ===')
-            console.log('Full Date:', currentDate.fullDate)
-            console.log('Year:', currentDate.year)
-            console.log('Month:', currentDate.month)
-            console.log('Day:', currentDate.day)
-            console.log('Day of Week:', currentDate.dayOfWeek)
-            console.log('ISO String:', currentDate.isoString)
-            console.log('Custom Format (YYYY-MM-DD):', currentDate.customFormat)
-
-            // Example of using date in a POST request
-            const payload = {
-                title: 'Test Post',
-                body: 'Test Body',
-                userId: 1,
-                createdAt: currentDate.isoString
-            }
-
-            console.log('\n=== Example Payload with Date ===')
-            console.log('Payload:', payload)
-        })
-    })
-
     describe('GET', () => {
         it('GET /posts should return valid posts data', async () => {
             const response = await request.get('/posts')

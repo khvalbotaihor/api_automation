@@ -3,7 +3,9 @@ import * as supertest from 'supertest'
 import { object, number, string, array } from 'superstruct'
 
 const request = supertest('https://practice-react.sdetunicorns.com/api/test')
-
+let brandId;
+const today = new Date()
+const getTime = today.getTime()
 
 describe('brands', ()=> {
     it('GET brands', async () => {
@@ -33,10 +35,10 @@ describe('brands', ()=> {
         expect(response.body.name).toBe("A Plus 6811")
     })
 
-    it.only('POST create a new brand', async () => {
+    it('POST create a new brand', async () => {
         const payload = {
-            "name": "test name",
-            "description": "test descr"
+            "name": 'test name'+ Math.floor(Math.random() *1000),
+            "description": "test description"
           }
 
         const response = await request
@@ -46,14 +48,41 @@ describe('brands', ()=> {
 
       console.log('response', response.body)
 
-      const today = new Date()
 
-
+        brandId = response.body['_id']
+        console.log('brandId ', brandId)
         
          expect(response.status).toBe(200)
          expect(response.body.name).toBe(payload.name) 
          expect(response.body.description).toBe(payload.description)
-         expect(response.body.createdAt).toContain([today.getFullYear, today.getMonth, today.getDate])
+         expect(response.body).toHaveProperty('createdAt') 
 
+         expect(response.body.createdAt).toContain(today.getFullYear().toString())
+         expect(response.body.createdAt).toContain(today.getDate().toString().padStart(2, '0'))
+
+    })
+
+    it('PUT update brand information', async () => {
+
+        const payload = {
+            "name": `new name ${getTime}`        
+          }
+
+          console.log('brandId in PUT request', brandId)
+          console.log('payload', payload)
+        const response = await request.put(`/brands/${brandId}`).send(payload)
+
+        expect(response.status).toBe(200)
+        console.log('response', response.body)
+    
+        expect(response.body.name).toBe(payload.name)
+    })
+
+    it('DELETE brand', async () => {
+
+        const response = await request.delete(`/brands/${brandId}`)
+
+        expect(response.status).toEqual(200)
+        expect(response.body).toEqual(null)
     })
 })
