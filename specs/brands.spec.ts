@@ -201,7 +201,7 @@ describe('brands', () => {
       ).join('');
 
       const payload = {
-        name: randomText,
+        name: randomText
       };
 
       console.log('brandId in PUT request', brandId);

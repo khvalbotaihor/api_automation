@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "brands": "npx jest specs/brands.spec.ts"
+    "brands": "npx jest specs/brands.spec.ts",
+    "cat": "npx jest specs/categories.spec.ts"
+
   },
   "keywords": [],
   "author": "",
