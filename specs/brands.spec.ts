@@ -10,7 +10,28 @@ const today = new Date()
 const payloadForPostRequest = {
     "name": 'test name'+ Math.floor(Math.random() *1000),
     "description": "test description"
-  }
+}
+  
+beforeAll(async() => {
+ const response = await request
+            .post('/brands')
+            .send(payloadForPostRequest)
+
+ console.log('beforeAll response: ', response.body)
+
+ brandId = response.body['_id']
+ console.log('beforeAll brandId: ', brandId)
+         
+  expect(response.status).toBe(200)
+         expect(response.body.name).toBe(payloadForPostRequest.name) 
+         expect(response.body.description).toBe(payloadForPostRequest.description)
+         expect(response.body).toHaveProperty('createdAt') 
+
+         expect(response.body.createdAt).toContain(today.getFullYear().toString())
+         expect(response.body.createdAt).toContain(today.getDate().toString().padStart(2, '0'))
+
+  
+})
 
 describe('brands', ()=> {
     it('GET brands', async () => {
@@ -41,10 +62,6 @@ describe('brands', ()=> {
 
 
       console.log('response', response.body)
-
-
-        brandId = response.body['_id']
-        console.log('brandId ', brandId)
         
          expect(response.status).toBe(200)
          expect(response.body.name).toBe(payloadForPostRequest.name) 
