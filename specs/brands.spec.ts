@@ -1,8 +1,9 @@
 import { describe, it } from '@jest/globals';
 import * as supertest from 'supertest';
 import { object, number, string, array, date } from 'superstruct';
+import BrandsController from './controller/brand.controller';
+//const request = supertest('https://practice-react.sdetunicorns.com/api/test');
 
-const request = supertest('https://practice-react.sdetunicorns.com/api/test');
 let brandId;
 const today = new Date();
 
@@ -12,7 +13,8 @@ const payloadForPostRequest = {
 };
 
 beforeAll(async () => {
-  const response = await request.post('/brands').send(payloadForPostRequest);
+  //const response = await request.post('/brands').send(payloadForPostRequest);
+  const response = await BrandsController.postBrands(payloadForPostRequest);
 
   console.log('beforeAll response: ', response.body);
 
@@ -28,7 +30,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  const response = await request.delete(`/brands/${brandId}`);
+  const response = await BrandsController.deleteBrands(brandId);
 
   console.log('afterAll response: ', response.body);
 
@@ -38,7 +40,7 @@ afterAll(async () => {
 
 describe('brands', () => {
   it('GET brands', async () => {
-    const response = await request.get('/brands');
+    const response = await BrandsController.getBrands();
 
     console.log('response', response.body);
 
@@ -59,7 +61,8 @@ describe('brands', () => {
         const payload = {
           name: 'test name' + Math.floor(Math.random() * 1000),
           description: 'test description',}
-        const response = await request.post('/brands').send(payload);
+          const response = await BrandsController.postBrands(payload);
+
 
         console.log('response', response.body);
 
@@ -73,7 +76,7 @@ describe('brands', () => {
     });
 
     it('Schema verification - Name is a mandatory field', async () => {
-      const response = await request.post('/brands').send({
+      const response = await BrandsController.postBrands({
         name: '',
         description: 'test description',
       });
@@ -95,7 +98,8 @@ describe('brands', () => {
       };
 
       console.log('Schema verification ', payload.name);
-      const response = await request.post('/brands').send(payload);
+      const response = await BrandsController.postBrands(payload);
+
 
       console.log('response', response.body);
 
@@ -109,7 +113,7 @@ describe('brands', () => {
         description: 'test description',
       };
 
-      const response = await request.post('/brands').send(payload);
+      const response = await BrandsController.postBrands(payload);
 
       console.log('response', response.body);
 
@@ -123,7 +127,7 @@ describe('brands', () => {
         description: 'test description',
       };
 
-      const response = await request.post('/brands').send(payload);
+      const response = await BrandsController.postBrands(payload);
 
       console.log('response', response.body);
 
@@ -132,7 +136,7 @@ describe('brands', () => {
     });
 
     it('Business logic - GET /brands/invalidId will throw an error', async () => {
-      const response = await request.get('/brands/invalid_id');
+      const response = await BrandsController.getBrandById('invalid_id');
 
       console.log('response', response.body);
 
@@ -141,7 +145,7 @@ describe('brands', () => {
     });
 
     it('Business logic - GET /brands/incorrect_id will throw an error', async () => {
-      const response = await request.get('/brands/64b8866b49e85607248e2b21');
+      const response = await BrandsController.getBrandById('64b8866b49e85607248e2b21');
 
       console.log('response', response.body);
 
@@ -156,7 +160,7 @@ describe('brands', () => {
       };
 
       console.log('payload', payload);
-      const response = await request.post('/brands').send(payload);
+      const response = await BrandsController.postBrands(payload);
 
       console.log('response', response.body);
 
@@ -166,7 +170,7 @@ describe('brands', () => {
   });
 
   it('GET brand/:id', async () => {
-    const response = await request.get('/brands/' + brandId);
+    const response = await BrandsController.getBrandById(brandId);
 
     console.log('response', response.body);
 
@@ -182,7 +186,8 @@ describe('brands', () => {
 
       console.log('brandId in PUT request', brandId);
       console.log('payload', payload);
-      const response = await request.put(`/brands/${brandId}`).send(payload);
+      const response = await BrandsController.putBrands(brandId, payload);
+
 
       expect(response.status).toBe(200);
       console.log('response', response.body);
@@ -201,7 +206,8 @@ describe('brands', () => {
 
       console.log('brandId in PUT request', brandId);
       console.log('payload', payload);
-      const response = await request.put(`/brands/${brandId}`).send(payload);
+      const response = await BrandsController.putBrands(brandId, payload);
+
 
       expect(response.status).toBe(200);
       console.log('response', response.body);
@@ -215,7 +221,7 @@ describe('brands', () => {
       };
 
       console.log('payload', payload);
-      const response = await request.put(`/brands/${brandId}`).send(payload);
+      const response = await BrandsController.putBrands(brandId, payload);
 
       console.log('response', response.body);
 
@@ -230,7 +236,7 @@ describe('brands', () => {
       };
 
       console.log('payload', payload);
-      const response = await request.put('/brands/64b8853449e85607248e2b11').send(payload);
+      const response = await BrandsController.putBrands('64b8853449e85607248e2b11', payload);
 
       console.log('response', response.body);
 

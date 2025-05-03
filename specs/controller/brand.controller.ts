@@ -1,11 +1,7 @@
 import * as supertest from 'supertest';
 const request = supertest('https://practice-react.sdetunicorns.com/api/test');
 
-type Brand = {
-  [key: string]: string;
-};
-
-class BrandController {
+class BrandsController {
   getBrands() {
     return request.get('/brands');
   }
@@ -14,11 +10,11 @@ class BrandController {
     return request.get(`/brands/${brandId}`);
   }
 
-  postBrands(payload: Brand) {
+  postBrands(payload) {
     return request.post('/brands').send(payload);
   }
 
-  putBrands(brandId: string, payload: Brand) {
+  putBrands(brandId: string, payload) {
     return request.put(`/brands/${brandId}`).send(payload);
   }
 
@@ -27,6 +23,6 @@ class BrandController {
   }
 }
 
-export default new BrandController();
+export default new BrandsController();
 
 
