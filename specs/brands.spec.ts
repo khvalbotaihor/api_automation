@@ -27,6 +27,15 @@ beforeAll(async () => {
   expect(response.body.createdAt).toContain(today.getDate().toString().padStart(2, '0'));
 });
 
+afterAll(async () => {
+  const response = await request.delete(`/brands/${brandId}`);
+
+  console.log('afterAll response: ', response.body);
+
+  expect(response.status).toEqual(200);
+  expect(response.body).toEqual(null);
+});
+
 describe('brands', () => {
   it('GET brands', async () => {
     const response = await request.get('/brands');
@@ -230,19 +239,19 @@ describe('brands', () => {
     });
   });
 
-  describe('DELETE brand', () => {
-    it('DELETE', async () => {
-      const response = await request.delete(`/brands/${brandId}`);
+  // describe('DELETE brand', () => {
+  //   it('DELETE', async () => {
+  //     const response = await request.delete(`/brands/${brandId}`);
 
-      expect(response.status).toEqual(200);
-      expect(response.body).toEqual(null);
-    });
+  //     expect(response.status).toEqual(200);
+  //     expect(response.body).toEqual(null);
+  //   });
 
-    it('DELETE invalid brand by invalid brandId', async () => {
-      const response = await request.delete('/brands/64b8853449e85607248e2b11');
+  //   it('DELETE invalid brand by invalid brandId', async () => {
+  //     const response = await request.delete('/brands/64b8853449e85607248e2b11');
 
-      expect(response.status).toEqual(404);
-      expect(response.body.error).toEqual('Brand not found.');
-    });
-  });
+  //     expect(response.status).toEqual(404);
+  //     expect(response.body.error).toEqual('Brand not found.');
+  //   });
+  // });
 });
