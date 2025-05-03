@@ -1,7 +1,7 @@
 import { describe, it } from '@jest/globals';
 import * as supertest from 'supertest';
 import { object, number, string, array, date } from 'superstruct';
-import controller from './controller/brand.controller';
+import controller from '../controller/brand.controller';
 //const request = supertest('https://practice-react.sdetunicorns.com/api/test');
 
 let brandId;
