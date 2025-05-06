@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "brands": "npx jest specs/brands.spec.ts",
-    "cat": "npx jest specs/categories.spec.ts"
+    "cat": "npx jest specs/categories.spec.ts",
+    "upload": "npx jest specs/upload.spec.ts"
 
   },
   "keywords": [],

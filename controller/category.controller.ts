@@ -9,12 +9,9 @@ class CategoriesController {
     const response = request
       .post('/auth/login')
       .send({
-        email: 'mod@mail.com',
-        password: 'Modpass123!'
+        email: config,
+        password: config.credentials.password
       })
-      .then((res) => {
-        return res.body.token;
-      });
     return response;
   }
 
