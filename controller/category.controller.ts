@@ -5,16 +5,6 @@ const request = supertest(config.baseUrl);
 
 class CategoriesController {
 
-  getToken() {
-    const response = request
-      .post('/auth/login')
-      .send({
-        email: config,
-        password: config.credentials.password
-      })
-    return response;
-  }
-
   getCategories() {
     return request.get('/categories');
   }
