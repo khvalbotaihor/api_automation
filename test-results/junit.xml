@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="12" failures="0" errors="0" time="13.421">
+  <testsuite name="specs/categories.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-07T13:51:02" time="13.051" tests="12">
+    <testcase classname="categories" name="GET categories" time="1.543">
+    </testcase>
+    <testcase classname="categories › POST create a new category" name="Create a new category" time="0.948">
+    </testcase>
+    <testcase classname="categories › POST create a new category" name="Schema verification - Name is a mandatory field" time="0.476">
+    </testcase>
+    <testcase classname="categories › POST create a new category" name="Schema verification - Name with 2 symbols validation - Valid check" time="1.283">
+    </testcase>
+    <testcase classname="categories › POST create a new category" name="Schema verification - Name with 1 symbol validation - test failed" time="0.472">
+    </testcase>
+    <testcase classname="categories › POST create a new category" name="Duplicate category entries are not allowed" time="1.717">
+    </testcase>
+    <testcase classname="categories" name="GET category/:id" time="0.464">
+    </testcase>
+    <testcase classname="categories › PUT update category information" name="Update category name" time="0.589">
+    </testcase>
+    <testcase classname="categories › PUT update category information" name="PUT check name validation on 30 symbols are allowed" time="0.652">
+    </testcase>
+    <testcase classname="categories › PUT update category information" name="PUT check name validation on 31 symbols are not allowed" time="0.472">
+    </testcase>
+    <testcase classname="categories › PUT update category information" name="PUT An error is shown when updating invalid category" time="0.483">
+    </testcase>
+    <testcase classname="categories › DELETE category" name="DELETE invalid category by invalid categoryId" time="0.47">
+    </testcase>
+  </testsuite>
+</testsuites>
