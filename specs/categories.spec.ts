@@ -113,14 +113,12 @@ describe('categories', () => {
     });
 
     it('Duplicate category entries are not allowed', async () => {
-      const payload = {
-        name: payloadForPostRequest.name
-      };
+      const payload = await createCategory();
 
-      const response = await controller.postCategories(payload).set('Authorization', `Bearer ${token}`);
+      const response2 = await controller.postCategories(payload).set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toBe(422);
-      expect(response.body.error).toContain(`${payload.name} already exists`);
+      expect(response2.status).toBe(422);
+      expect(response2.body.error).toContain(`${payload.name} already exists`);
     });
   });
 
