@@ -1,4 +1,6 @@
 import adminController from '../controller/admin.controller';
+import categoryController from '../controller/category.controller';
+import config from '../config/base.config';
 
 export const login = async (email:string, password: string)  => {
   const data = {"email": email, "password": password,};
@@ -8,4 +10,14 @@ export const login = async (email:string, password: string)  => {
 
   return response.body.token;
 };
+
+
+export const createCategory = async (payload: { [key: string]: string }) => {
+  const token = await login(config.credentials.email, config.credentials.password);
+  const response = await categoryController.postCategories(payload).set('Authorization', `Bearer ${token}`);
+  console.log('response', response.body);
+
+  return response;
+}
+
 

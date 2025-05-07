@@ -13,7 +13,7 @@ class CategoriesController {
     return request.get(`/categories/${categoryId}`);
   }
 
-  postCategories(payload: { name: string }) {
+  postCategories(payload: { [key: string]: string }) {
     return request.post('/categories').send(payload);
   }
 
