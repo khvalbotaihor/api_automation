@@ -11,6 +11,14 @@ export const login = async (email:string, password: string)  => {
   return response.body.token;
 };
 
+export const getCategoryId = async (token: string) => {
+    const payload = {name: 'test category' + Math.floor(Math.random() * 1000)};
+    const response = await categoryController.postCategories(payload).set('Authorization', `Bearer ${token}`);
+    console.log('response', response.body);
+
+    return response.body._id;
+    
+}
 
 export const createCategory = async (payload: { [key: string]: string }) => {
   const token = await login(config.credentials.email, config.credentials.password);
