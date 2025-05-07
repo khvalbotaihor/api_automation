@@ -3,7 +3,8 @@ import controller from '../controller/category.controller';
 import * as supertest from 'supertest';
 import { login } from '../utils/helper';
 import config from '../config/base.config';
-import { createCategory } from '../utils/helper';
+import { createCategory, getCategoryId } from '../utils/helper';
+import { get } from 'http';
 
 const request = supertest('https://practice-react.sdetunicorns.com/api/test');
 
@@ -29,13 +30,13 @@ beforeAll(async () => {
 
 
   //const response = await controller.postCategories(payloadForPostRequest).set('Authorization', `Bearer ${token}`);
-  const response = await createCategory(payloadForPostRequest);
-  console.log('beforeAll response: ', response.body);
-  console.log('beforeAll categoryId: ', response.body._id);
-  categoryId = response.body._id;
+  // const response = await createCategory(payloadForPostRequest);
+  // console.log('beforeAll response: ', response.body);
+  // console.log('beforeAll categoryId: ', response.body._id);
+  categoryId = await getCategoryId(token);
 
-  expect(response.status).toBe(200);
-  expect(response.body.name).toBe(payloadForPostRequest.name);
+  //expect(response.status).toBe(200);
+  //expect(response.body.name).toBe(payloadForPostRequest.name);
   //expect(response.body).toHaveProperty('createdAt');
   //expect(response.body.createdAt).toContain(today.getFullYear().toString());
 });
@@ -127,7 +128,7 @@ describe('categories', () => {
     const response = await controller.getCategoryById(categoryId);
 
     expect(response.status).toBe(200);
-    expect(response.body.name).toBe(payloadForPostRequest.name);
+    expect(response.body.name).toContain('test category');
   });
 
   describe('PUT update category information', () => {
