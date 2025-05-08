@@ -25,7 +25,7 @@
     "ts-jest": "^29.3.2"
   },
   "jest-junit": {
-    "outputDirectory": "./reports",
+    "outputDirectory": "./test-results",
     "outputName": "junit.xml",
     "ancestorSeparator": " › ",
     "uniqueOutputName": "false",

@@ -257,11 +257,544 @@ header {
   font-size: 1rem;
   padding: 0 0.5rem;
 }
-</style></head><body><div class="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2025-05-07 17:56:12</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (1)</div><div class="summary-passed  summary-empty">0 passed</div><div class="summary-failed ">1 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (14)</div><div class="summary-passed ">13 passed</div><div class="summary-failed ">1 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><input id="collapsible-0" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-0"><div class="suite-info"><div class="suite-path">/Users/ihor/Desktop/api_automation/specs/brands.spec.ts</div><div class="suite-time warn">11.398s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands</div><div class="test-title">GET brands</div><div class="test-status">passed</div><div class="test-duration">2.475s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand &gt; Create brands</div><div class="test-title">Create a new brand</div><div class="test-status">passed</div><div class="test-duration">0.491s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Schema verification - Name is a mandatory field</div><div class="test-status">passed</div><div class="test-duration">0.389s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Schema verification - Name with 2 symbols validation - Valid check</div><div class="test-status">failed</div><div class="test-duration">0.478s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+</style></head><body><div class="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2025-05-08 16:26:41</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (4)</div><div class="summary-passed ">3 passed</div><div class="summary-failed ">1 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (39)</div><div class="summary-passed ">36 passed</div><div class="summary-failed ">3 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><input id="collapsible-0" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-0"><div class="suite-info"><div class="suite-path">/Users/ihor/Desktop/api_automation/specs/upload.spec.ts</div><div class="suite-time warn">11.873s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Upload single file</div><div class="test-title">POST /upload/single</div><div class="test-status">passed</div><div class="test-duration">1.693s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Upload single file</div><div class="test-title">POST /upload/multiple</div><div class="test-status">passed</div><div class="test-duration">1.761s</div></div></div></div><div class="suite-consolelog"><div class="suite-consolelog-header">Console Log</div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/upload.spec.ts:6:17
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/upload.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  mimetype: 'image/png',
+  filename: 'test.png',
+  size: '1413164',
+  _id: '681cb11c986188d4dce5c3bf',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/upload.spec.ts:17:17
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/upload.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response POST /upload/multiple [
+  {
+    mimetype: 'image/png',
+    filename: 'test.png',
+    size: '1413164',
+    _id: '681cb11e986188d4dce5c3c5',
+    __v: 0
+  },
+  {
+    mimetype: 'image/png',
+    filename: 'test_2.png',
+    size: '856733',
+    _id: '681cb11e986188d4dce5c3c6',
+    __v: 0
+  }
+]</pre></div></div></div><div id="suite-2" class="suite-container"><input id="collapsible-1" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-1"><div class="suite-info"><div class="suite-path">/Users/ihor/Desktop/api_automation/specs/poc.spec.ts</div><div class="suite-time warn">12.452s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; GET</div><div class="test-title">GET /posts should return valid posts data</div><div class="test-status">passed</div><div class="test-duration">0.273s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; GET</div><div class="test-title">GET /posts with query parameters</div><div class="test-status">passed</div><div class="test-duration">0.092s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; GET</div><div class="test-title">GET /posts/:id should return specific post</div><div class="test-status">passed</div><div class="test-duration">0.096s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; GET</div><div class="test-title">GET /comments with pagination</div><div class="test-status">passed</div><div class="test-duration">0.1s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; POST</div><div class="test-title">POST /posts should create new post</div><div class="test-status">passed</div><div class="test-duration">0.472s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">POC Tests &gt; POST</div><div class="test-title">POST /posts with invalid data should fail</div><div class="test-status">failed</div><div class="test-duration">0.617s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
 
-Expected: 200
-Received: 422
-    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:106:31
+Expected: 400
+Received: 201
+    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:89:37
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; PUT</div><div class="test-title">PUT /posts/:id should update post</div><div class="test-status">passed</div><div class="test-duration">0.444s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">POC Tests &gt; PUT</div><div class="test-title">PUT /posts/:id with non-existent id should fail</div><div class="test-status">failed</div><div class="test-duration">0.427s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 500
+    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:118:37
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; DELETE</div><div class="test-title">DELETE /posts/:id should delete post</div><div class="test-status">passed</div><div class="test-duration">0.557s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">POC Tests &gt; DELETE</div><div class="test-title">DELETE /posts/:id with non-existent id should fail</div><div class="test-status">failed</div><div class="test-duration">0.233s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:134:37
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">POC Tests &gt; PATCH</div><div class="test-title">PATCH /posts/:id should partially update post</div><div class="test-status">passed</div><div class="test-duration">0.531s</div></div></div></div><div class="suite-consolelog"><div class="suite-consolelog-header">Console Log</div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:22:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Response status: 200</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:34:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Response data is valid according to schema</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:35:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Number of posts: 100</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:44:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Filtered posts count: 10</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:52:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Post details: {
+  userId: 1,
+  id: 1,
+  title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+  body: 'quia et suscipit\n' +
+    'suscipit recusandae consequuntur expedita et cum\n' +
+    'reprehenderit molestiae ut ut quas totam\n' +
+    'nostrum rerum est autem sunt rem eveniet architecto'
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:61:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Paginated comments: [
+  {
+    postId: 1,
+    id: 1,
+    name: 'id labore ex et quam laborum',
+    email: 'Eliseo@gardner.biz',
+    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\n' +
+      'tempora quo necessitatibus\n' +
+      'dolor quam autem quasi\n' +
+      'reiciendis et nam sapiente accusantium'
+  },
+  {
+    postId: 1,
+    id: 2,
+    name: 'quo vero reiciendis velit similique earum',
+    email: 'Jayne_Kuhic@sydney.com',
+    body: 'est natus enim nihil est dolore omnis voluptatem numquam\n' +
+      'et omnis occaecati quod ullam at\n' +
+      'voluptatem error expedita pariatur\n' +
+      'nihil sint nostrum voluptatem reiciendis et'
+  }
+]</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:81:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Created post: {
+  title: 'Test Post Title',
+  body: 'Test Post Body',
+  userId: 1,
+  id: 101
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:110:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Updated post: {
+  title: 'Updated Post Title',
+  body: 'Updated Post Body',
+  userId: 5,
+  id: 1
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:128:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Delete response: {}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:151:21
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">Partially updated post: {
+  userId: 1,
+  id: 1,
+  title: 'Partially Updated Title',
+  body: 'quia et suscipit\n' +
+    'suscipit recusandae consequuntur expedita et cum\n' +
+    'reprehenderit molestiae ut ut quas totam\n' +
+    'nostrum rerum est autem sunt rem eveniet architecto'
+}</pre></div></div></div><div id="suite-3" class="suite-container"><input id="collapsible-2" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-2"><div class="suite-info"><div class="suite-path">/Users/ihor/Desktop/api_automation/specs/brands.spec.ts</div><div class="suite-time warn">18.81s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands</div><div class="test-title">GET brands</div><div class="test-status">passed</div><div class="test-duration">3s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand &gt; Create brands</div><div class="test-title">Create a new brand</div><div class="test-status">passed</div><div class="test-duration">0.63s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Schema verification - Name is a mandatory field</div><div class="test-status">passed</div><div class="test-duration">0.387s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Schema verification - Name with 2 symbols validation - Valid check</div><div class="test-status">passed</div><div class="test-duration">0.479s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Schema verification - Name with 1 symbol validation - test failed</div><div class="test-status">passed</div><div class="test-duration">0.373s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Duplicate brand entries are not allowed</div><div class="test-status">passed</div><div class="test-duration">0.471s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Business logic - GET /brands/invalidId will throw an error</div><div class="test-status">passed</div><div class="test-duration">0.371s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Business logic - GET /brands/incorrect_id will throw an error</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">POST Brand description must be a string</div><div class="test-status">passed</div><div class="test-duration">0.373s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands</div><div class="test-title">GET brand/:id</div><div class="test-status">passed</div><div class="test-duration">0.47s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT</div><div class="test-status">passed</div><div class="test-duration">0.562s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT check name validation on 30 symbols are allowed</div><div class="test-status">passed</div><div class="test-duration">0.562s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT check name validation on 31 symbols are not allowed</div><div class="test-status">passed</div><div class="test-duration">0.383s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT An error is shown when updating invalid brand</div><div class="test-status">passed</div><div class="test-duration">0.466s</div></div></div></div><div class="suite-consolelog"><div class="suite-consolelog-header">Console Log</div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:19:11
     at Generator.next (&lt;anonymous&gt;)
     at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Schema verification - Name with 1 symbol validation - test failed</div><div class="test-status">passed</div><div class="test-duration">0.378s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Duplicate brand entries are not allowed</div><div class="test-status">passed</div><div class="test-duration">0.464s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Business logic - GET /brands/invalidId will throw an error</div><div class="test-status">passed</div><div class="test-duration">0.376s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">Business logic - GET /brands/incorrect_id will throw an error</div><div class="test-status">passed</div><div class="test-duration">0.471s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; POST create a new brand</div><div class="test-title">POST Brand description must be a string</div><div class="test-status">passed</div><div class="test-duration">0.371s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands</div><div class="test-title">GET brand/:id</div><div class="test-status">passed</div><div class="test-duration">0.465s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT</div><div class="test-status">passed</div><div class="test-duration">0.575s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT check name validation on 30 symbols are allowed</div><div class="test-status">passed</div><div class="test-duration">0.664s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT check name validation on 31 symbols are not allowed</div><div class="test-status">passed</div><div class="test-duration">0.371s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">brands &gt; PUT update brand information</div><div class="test-title">PUT An error is shown when updating invalid brand</div><div class="test-status">passed</div><div class="test-duration">0.473s</div></div></div></div></div></div></body></html>
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">beforeAll response:  {
+  name: 'test name343',
+  description: 'test description',
+  _id: '681cb11b986188d4dce5c3bb',
+  createdAt: '2025-05-08T13:26:51.686Z',
+  updatedAt: '2025-05-08T13:26:51.686Z',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:22:11
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">beforeAll brandId:  681cb11b986188d4dce5c3bb</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:45:13
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response [
+  { _id: '64b7d4b549e85607248e2aa0', name: 'A Plus 468' },
+  { _id: '64b7d4e249e85607248e2aad', name: 'A Plus 3159' },
+  { _id: '64b7d69a49e85607248e2abe', name: 'A Plus 3427' },
+  { _id: '64b87fa649e85607248e2aca', name: 'A Plus 3761' },
+  { _id: '64b87fa849e85607248e2ad0', name: 'A Plus 6036' },
+  { _id: '64b881ef49e85607248e2adb', name: 'A Plus 4163' },
+  { _id: '64b881f049e85607248e2ae1', name: 'A Plus 4544' },
+  { _id: '64b8821349e85607248e2af2', name: 'A Plus 623' },
+  { _id: '64b882b549e85607248e2afd', name: 'A Plus 2075' },
+  { _id: '64b882b649e85607248e2b03', name: 'A Plus 7157' },
+  { _id: '64b8836b49e85607248e2b0e', name: 'A Plus 7553' },
+  { _id: '64b8836c49e85607248e2b14', name: 'A Plus 465' },
+  { _id: '64b8853249e85607248e2b1c', name: 'A Plus 5395' },
+  { _id: '64b8853349e85607248e2b1f', name: 'A Plus 9040' },
+  {
+    _id: '64b8853449e85607248e2b24',
+    name: 'this is thirty characters long'
+  },
+  { _id: '64b8866b49e85607248e2b27', name: 'A Plus 2724' },
+  { _id: '64b8866b49e85607248e2b2a', name: 'A Plus 5767' },
+  { _id: '64b8866d49e85607248e2b2d', name: 'A Plus 7967' },
+  { _id: '64b886bb49e85607248e2b37', name: 'A Plus 3072' },
+  { _id: '64b886bc49e85607248e2b3a', name: 'A Plus 8586' },
+  { _id: '64b8871d49e85607248e2b41', name: 'A Plus 3020' },
+  { _id: '64b8871e49e85607248e2b44', name: 'A Plus 461' },
+  { _id: '64b8871f49e85607248e2b47', name: 'A Plus 3172' },
+  { _id: '64b97bf549e85607248e2b52', name: 'A Plus 9337' },
+  { _id: '64b97fa649e85607248e2b61', name: 'A Plus 55' },
+  { _id: '64bc8e2349e85607248e2b80', name: 'A Plus 2029' },
+  { _id: '64bc96af49e85607248e2b8f', name: 'A Plus 646' },
+  { _id: '64bc96e949e85607248e2b9e', name: 'A Plus 729' },
+  { _id: '64bc96ea49e85607248e2ba4', name: 'A Plus 4869' },
+  { _id: '64bd10c349e85607248e2bb0', name: 'A Plus 7570' },
+  { _id: '64bd134049e85607248e2bba', name: 'A Plus 874' },
+  { _id: '64bd135549e85607248e2bc0', name: 'A Plus 445' },
+  { _id: '64bd135649e85607248e2bc4', name: 'A Plus 1108' },
+  { _id: '64bd14c649e85607248e2bd8', name: 'A Plus 2133' },
+  { _id: '64bd155549e85607248e2be0', name: 'A Plus 2496' },
+  { _id: '64bd155649e85607248e2be3', name: 'A Plus 5271' },
+  { _id: '64bd155749e85607248e2be8', name: 'A Plus 8207' },
+  { _id: '64bd156c49e85607248e2bf5', name: 'A Plus 774' },
+  { _id: '64bd16bc49e85607248e2c00', name: 'A Plus 7627' },
+  { _id: '64bd16bd49e85607248e2c06', name: 'A Plus 9843' },
+  { _id: '64bd223749e85607248e2c11', name: 'A Plus 5618' },
+  { _id: '64bd223849e85607248e2c17', name: 'A Plus 4936' },
+  { _id: '64bd22fc49e85607248e2c1f', name: 'A Plus 9128' },
+  { _id: '64bd22fd49e85607248e2c25', name: 'A Plus 7091' },
+  { _id: '64bd232849e85607248e2c29', name: 'A Plus 7273' },
+  { _id: '64bd232a49e85607248e2c2f', name: 'A Plus 2895' },
+  { _id: '64bd238049e85607248e2c33', name: 'A Plus 5659' },
+  { _id: '64bd238149e85607248e2c3a', name: 'A Plus 7423' },
+  { _id: '64bd239649e85607248e2c3e', name: 'A Plus 5329' },
+  { _id: '64bd239749e85607248e2c45', name: 'A Plus 5509' },
+  { _id: '64bd240949e85607248e2c49', name: 'A Plus 8399' },
+  { _id: '64bd240b49e85607248e2c50', name: 'A Plus 6754' },
+  { _id: '64bd248749e85607248e2c5b', name: 'A Plus 2673' },
+  { _id: '64bd24a949e85607248e2c5f', name: 'A Plus 5215' },
+  { _id: '64bd24ab49e85607248e2c66', name: 'A Plus 554' },
+  { _id: '64bd285b49e85607248e2c69', name: 'A Plus 9949 Updated' },
+  { _id: '64bd2aca49e85607248e2c6d', name: 'A Plus 1647' },
+  { _id: '64bd2c8449e85607248e2c7a', name: 'A Plus 5478' },
+  { _id: '64bd2cca49e85607248e2c88', name: 'A Plus 202' },
+  { _id: '64bd2cd949e85607248e2c96', name: 'A Plus 1895' },
+  { _id: '64bd2cda49e85607248e2c9a', name: 'A Plus 4526 Updated' },
+  { _id: '64bd2d8449e85607248e2ca4', name: 'A Plus 7104' },
+  { _id: '64bd2d8549e85607248e2ca8', name: 'A Plus 7621' },
+  { _id: '64bd2d8649e85607248e2cac', name: 'A Plus 913 Updated' },
+  { _id: '64bd2ddb49e85607248e2cb6', name: 'A Plus 5157' },
+  { _id: '64bd2ddc49e85607248e2cba', name: 'A Plus 7826' },
+  { _id: '64bd2ddd49e85607248e2cbe', name: 'A Plus 4427 Updated' },
+  { _id: '64bd2e1d49e85607248e2ccd', name: 'A Plus 5694' },
+  { _id: '64bd2e1e49e85607248e2cd1', name: 'A Plus 1938 Updated' },
+  { _id: '64bd2e4949e85607248e2cdc', name: 'A Plus 1496' },
+  { _id: '64bd2e4a49e85607248e2ce0', name: 'A Plus 9227' },
+  { _id: '64bd2e4a49e85607248e2ce4', name: 'A Plus 8794 Updated' },
+  { _id: '64bd2fcc49e85607248e2cef', name: 'A Plus 7051' },
+  { _id: '64bd2fcd49e85607248e2cf3', name: 'A Plus 9210' },
+  { _id: '64bd2fcd49e85607248e2cf7', name: 'A Plus 851 Updated' },
+  { _id: '64bd2fff49e85607248e2d06', name: 'A Plus 6791' },
+  { _id: '64bd2fff49e85607248e2d0a', name: 'A Plus 876 Updated' },
+  { _id: '64bd304449e85607248e2d15', name: 'A Plus 142' },
+  { _id: '64bd304549e85607248e2d19', name: 'A Plus 846' },
+  { _id: '64bd304649e85607248e2d1d', name: 'A Plus 4880 Updated' },
+  { _id: '64bd31ff49e85607248e2d28', name: 'A Plus 7736' },
+  { _id: '64bd320049e85607248e2d2c', name: 'A Plus 5036' },
+  { _id: '64bd320049e85607248e2d30', name: 'A Plus 109 Updated' },
+  { _id: '64bd32bb49e85607248e2d3b', name: 'A Plus 207' },
+  { _id: '64bd32bc49e85607248e2d43', name: 'A Plus 1360 Updated' },
+  { _id: '64bd4aff49e85607248e2d89', name: 'A Plus 8563' },
+  { _id: '64bd4b0049e85607248e2d8f', name: 'A Plus 8163' },
+  { _id: '64bd4b5949e85607248e2d9a', name: 'A Plus 1081' },
+  { _id: '64bdb42149e85607248e2ee8', name: 'A Plus 271' },
+  { _id: '64bdb5d149e85607248e2ef9', name: 'A Plus 6630 Updated' },
+  { _id: '64bdb6a949e85607248e2f11', name: 'A Plus 8343 Updated' },
+  { _id: '64bdb82049e85607248e2f29', name: 'A Plus 6546 Updated' },
+  { _id: '64bdba6e49e85607248e2f41', name: 'A Plus 6889 Updated' },
+  { _id: '64bdba6e49e85607248e2f43', name: ' updated' },
+  { _id: '64bdbaa349e85607248e2f4e', name: 'A Plus 1847 Updated' },
+  { _id: '64bdbaf249e85607248e2f56', name: 'A Plus 615 Updated' },
+  { _id: '64bdbb1149e85607248e2f5e', name: 'A Plus 568 Updated' },
+  { _id: '64bdbb3e49e85607248e2f66', name: 'A Plus 9919 Updated' },
+  { _id: '64bdbb7349e85607248e2f6e', name: 'A Plus 512 Updated' },
+  { _id: '64bdbb9c49e85607248e2f76', name: 'A Plus 1448 Updated' },
+  ... 4816 more items
+]</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:54:13
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">object keys [ '_id', 'name' ]</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:67:17
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  name: 'test name309',
+  description: 'test description',
+  _id: '681cb11f986188d4dce5c3cc',
+  createdAt: '2025-05-08T13:26:55.343Z',
+  updatedAt: '2025-05-08T13:26:55.343Z',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:84:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Name is required' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:100:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:90:89)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">Schema verification  EC</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:104:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  name: 'EC',
+  description: 'test description',
+  _id: '681cb120986188d4dce5c3cf',
+  createdAt: '2025-05-08T13:26:56.211Z',
+  updatedAt: '2025-05-08T13:26:56.211Z',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:118:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Brand name is too short' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:132:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'test name343 already exists' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:141:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Unable to fetch brand' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:150:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Brand not found.' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:162:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:156:62)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">payload { name: 'test name886', description: 111 }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:165:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Brand description must be a string' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:175:13
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  _id: '681cb11b986188d4dce5c3bb',
+  name: 'test name343',
+  description: 'test description',
+  createdAt: '2025-05-08T13:26:51.686Z',
+  updatedAt: '2025-05-08T13:26:51.686Z',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:187:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:182:26)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">brandId in PUT request 681cb11b986188d4dce5c3bb</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:188:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:182:26)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">payload { name: 'new name31' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:193:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  _id: '681cb11b986188d4dce5c3bb',
+  name: 'new name31',
+  description: '',
+  createdAt: '2025-05-08T13:26:51.686Z',
+  updatedAt: '2025-05-08T13:26:59.298Z',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:207:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:198:74)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">brandId in PUT request 681cb11b986188d4dce5c3bb</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:208:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:198:74)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">payload { name: 'HGTGOPYOGXMPNMQLBZYCKAWLNQAEFG' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:213:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  _id: '681cb11b986188d4dce5c3bb',
+  name: 'HGTGOPYOGXMPNMQLBZYCKAWLNQAEFG',
+  description: '',
+  createdAt: '2025-05-08T13:26:51.686Z',
+  updatedAt: '2025-05-08T13:26:59.859Z',
+  __v: 0
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:223:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:218:78)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">payload { name: 'this is thirtyO characters long' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:226:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Brand name is too long' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:238:15
+    at Generator.next (&lt;anonymous&gt;)
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:8:71
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt;.__awaiter (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:4:12)
+    at Object.&lt;anonymous&gt; (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:232:72)
+    at Promise.then.completed (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ihor/Desktop/api_automation/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ihor/Desktop/api_automation/node_modules/jest-runner/build/testWorker.js:106:12)</pre><pre class="suite-consolelog-item-message">payload { name: 'test name974', describe: 'test describe' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:241:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { error: 'Brand not found.' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:35:11
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">afterAll response:  null</pre></div></div></div><div id="suite-4" class="suite-container"><input id="collapsible-3" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-3"><div class="suite-info"><div class="suite-path">/Users/ihor/Desktop/api_automation/specs/categories.spec.ts</div><div class="suite-time warn">20.488s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories</div><div class="test-title">GET categories</div><div class="test-status">passed</div><div class="test-duration">1.436s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; POST create a new category</div><div class="test-title">Create a new category</div><div class="test-status">passed</div><div class="test-duration">1.09s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; POST create a new category</div><div class="test-title">Schema verification - Name is a mandatory field</div><div class="test-status">passed</div><div class="test-duration">0.462s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; POST create a new category</div><div class="test-title">Schema verification - Name with 2 symbols validation - Valid check</div><div class="test-status">passed</div><div class="test-duration">0.939s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; POST create a new category</div><div class="test-title">Schema verification - Name with 1 symbol validation - test failed</div><div class="test-status">passed</div><div class="test-duration">0.471s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; POST create a new category</div><div class="test-title">Duplicate category entries are not allowed</div><div class="test-status">passed</div><div class="test-duration">1.69s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories</div><div class="test-title">GET category/:id</div><div class="test-status">passed</div><div class="test-duration">0.479s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; PUT update category information</div><div class="test-title">Update category name</div><div class="test-status">passed</div><div class="test-duration">0.563s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; PUT update category information</div><div class="test-title">PUT check name validation on 30 symbols are allowed</div><div class="test-status">passed</div><div class="test-duration">0.565s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; PUT update category information</div><div class="test-title">PUT check name validation on 31 symbols are not allowed</div><div class="test-status">passed</div><div class="test-duration">0.467s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; PUT update category information</div><div class="test-title">PUT An error is shown when updating invalid category</div><div class="test-status">passed</div><div class="test-duration">0.474s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">categories &gt; DELETE category</div><div class="test-title">DELETE invalid category by invalid categoryId</div><div class="test-status">passed</div><div class="test-duration">0.471s</div></div></div></div><div class="suite-consolelog"><div class="suite-consolelog-header">Console Log</div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/utils/helper.ts:9:11
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/utils/helper.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQ0OTQzNzBkODc1OTJlYjI0MDE4YzIiLCJpYXQiOjE3NDY3MTA4MTF9.CadvqM7WKuxyj51Lydl3MvlbVFwdlrHB3dI50xnc1D8',
+  info: {
+    _id: '634494370d87592eb24018c2',
+    email: 'mod@mail.com',
+    password: null,
+    username: 'Moderator',
+    reset_token: null,
+    expiry_token: null,
+    super_admin: false,
+    gender: 'male',
+    contact: '',
+    user_roles: false,
+    category_roles: true,
+    brand_roles: true,
+    product_roles: false,
+    __v: 0
+  }
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/utils/helper.ts:17:13
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/utils/helper.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { name: 'test category14', _id: '681cb11d986188d4dce5c3c2', __v: 0 }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/utils/helper.ts:9:11
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/utils/helper.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQ0OTQzNzBkODc1OTJlYjI0MDE4YzIiLCJpYXQiOjE3NDY3MTA4MTh9.M5YTK7vH_kVfuGAFWMtdMN5YOr6t762jXlgEPhyMNxU',
+  info: {
+    _id: '634494370d87592eb24018c2',
+    email: 'mod@mail.com',
+    password: null,
+    username: 'Moderator',
+    reset_token: null,
+    expiry_token: null,
+    super_admin: false,
+    gender: 'male',
+    contact: '',
+    user_roles: false,
+    category_roles: true,
+    brand_roles: true,
+    product_roles: false,
+    __v: 0
+  }
+}</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/utils/helper.ts:27:11
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/utils/helper.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response { name: 'test category537', _id: '681cb122986188d4dce5c3da', __v: 0 }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/categories.spec.ts:176:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/categories.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response for PUT An error is shown when updating invalid category { error: 'Unable to update categories' }</pre></div><div class="suite-consolelog-item"><pre class="suite-consolelog-item-origin">    at /Users/ihor/Desktop/api_automation/specs/categories.spec.ts:185:15
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/categories.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</pre><pre class="suite-consolelog-item-message">response for DELETE category { error: 'Unable to delete categories' }</pre></div></div></div></div></body></html>
