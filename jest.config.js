@@ -9,7 +9,7 @@ module.exports = {
     [
       "jest-junit",
       {
-        outputDirectory: "./test-results", // 👈 MATCH THIS TO JENKINS
+        outputDirectory: "./reports", // 👈 MATCH THIS TO JENKINS
         outputName: "junit.xml",
         suiteName: "jest tests",
         classNameTemplate: "{classname}-{title}",
@@ -22,7 +22,7 @@ module.exports = {
       "jest-html-reporter",
       {
         pageTitle: "Test Report 1",
-        outputPath: "./reports/html_reports/test-report.html",
+        outputPath: "./reports/test-report.html",
         includeFailureMsg: true,
         includeSuiteFailure: true,
         includeConsoleLog: true,
@@ -32,7 +32,7 @@ module.exports = {
     [
       "jest-html-reporters",
       {
-        publicPath: "./reports/html_reports_2",
+        publicPath: "./reports/",
         filename: "report.html",
         expand: true,
         openReport: true
