@@ -2,24 +2,27 @@
 module.exports = {
   testEnvironment: "node",
   transform: {
-    "^.+\.tsx?$": ["ts-jest",{}],
+    "^.+\\.tsx?$": ["ts-jest", {}],
   },
   reporters: [
     'default',
-    'jest-junit',
+    ['jest-junit', {
+      outputDirectory: './reports/junit',
+      outputName: 'junit.xml',
+    }],
     ['jest-html-reporter', {
-      "pageTitle": "Test Report 1",
-      "outputPath": "./reports/html_reports/test-report.html",
-      "includeFailureMsg": true,
-      "includeSuiteFailure": true,
-      "includeConsoleLog": true,
-      "includeStackTrace": true
+      pageTitle: "Test Report 1",
+      outputPath: "./reports/html_reports/test-report.html",
+      includeFailureMsg: true,
+      includeSuiteFailure: true,
+      includeConsoleLog: true,
+      includeStackTrace: true
     }],
     ['jest-html-reporters', {
-      "publicPath": "./reports/html_reports_2",
-      "filename": "report.html",
-      "expand": true,
-      "openReport": true
+      publicPath: "./reports/html_reports_2",
+      filename: "report.html",
+      expand: true,
+      openReport: true
     }]
   ]
 };
