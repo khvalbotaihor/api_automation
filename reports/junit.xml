@@ -1,121 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="39" failures="4" errors="0" time="15.399">
-  <testsuite name="specs/poc.spec.ts" errors="0" failures="3" skipped="0" timestamp="2025-05-07T14:45:44" time="6.512" tests="11">
-    <testcase classname="POC Tests › GET" name="GET /posts should return valid posts data" time="0.21">
+<testsuites name="jest tests" tests="14" failures="1" errors="0" time="11.787">
+  <testsuite name="specs/brands.spec.ts" errors="0" failures="1" skipped="0" timestamp="2025-05-07T14:56:13" time="11.398" tests="14">
+    <testcase classname="brands" name="GET brands" time="2.475">
     </testcase>
-    <testcase classname="POC Tests › GET" name="GET /posts with query parameters" time="0.085">
+    <testcase classname="brands › POST create a new brand › Create brands" name="Create a new brand" time="0.491">
     </testcase>
-    <testcase classname="POC Tests › GET" name="GET /posts/:id should return specific post" time="0.087">
+    <testcase classname="brands › POST create a new brand" name="Schema verification - Name is a mandatory field" time="0.389">
     </testcase>
-    <testcase classname="POC Tests › GET" name="GET /comments with pagination" time="0.082">
-    </testcase>
-    <testcase classname="POC Tests › POST" name="POST /posts should create new post" time="0.235">
-    </testcase>
-    <testcase classname="POC Tests › POST" name="POST /posts with invalid data should fail" time="0.446">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 400
-Received: 201
-    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:89:37
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
-    </testcase>
-    <testcase classname="POC Tests › PUT" name="PUT /posts/:id should update post" time="0.468">
-    </testcase>
-    <testcase classname="POC Tests › PUT" name="PUT /posts/:id with non-existent id should fail" time="0.209">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 404
-Received: 500
-    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:118:37
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
-    </testcase>
-    <testcase classname="POC Tests › DELETE" name="DELETE /posts/:id should delete post" time="0.197">
-    </testcase>
-    <testcase classname="POC Tests › DELETE" name="DELETE /posts/:id with non-existent id should fail" time="0.447">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 404
-Received: 200
-    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:134:37
-    at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
-    </testcase>
-    <testcase classname="POC Tests › PATCH" name="PATCH /posts/:id should partially update post" time="0.343">
-    </testcase>
-  </testsuite>
-  <testsuite name="specs/upload.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-07T14:45:44" time="6.872" tests="2">
-    <testcase classname="Upload single file" name="POST /upload/single" time="1.495">
-    </testcase>
-    <testcase classname="Upload single file" name="POST /upload/multiple" time="1.707">
-    </testcase>
-  </testsuite>
-  <testsuite name="specs/brands.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-07T14:45:44" time="13.287" tests="14">
-    <testcase classname="brands" name="GET brands" time="2.519">
-    </testcase>
-    <testcase classname="brands › POST create a new brand › Create brands" name="Create a new brand" time="0.49">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="Schema verification - Name is a mandatory field" time="0.383">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="Schema verification - Name with 2 symbols validation - Valid check" time="0.477">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="Schema verification - Name with 1 symbol validation - test failed" time="0.375">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="Duplicate brand entries are not allowed" time="0.465">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="Business logic - GET /brands/invalidId will throw an error" time="0.373">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="Business logic - GET /brands/incorrect_id will throw an error" time="0.563">
-    </testcase>
-    <testcase classname="brands › POST create a new brand" name="POST Brand description must be a string" time="0.381">
-    </testcase>
-    <testcase classname="brands" name="GET brand/:id" time="0.474">
-    </testcase>
-    <testcase classname="brands › PUT update brand information" name="PUT" time="0.571">
-    </testcase>
-    <testcase classname="brands › PUT update brand information" name="PUT check name validation on 30 symbols are allowed" time="0.563">
-    </testcase>
-    <testcase classname="brands › PUT update brand information" name="PUT check name validation on 31 symbols are not allowed" time="0.375">
-    </testcase>
-    <testcase classname="brands › PUT update brand information" name="PUT An error is shown when updating invalid brand" time="0.465">
-    </testcase>
-  </testsuite>
-  <testsuite name="specs/categories.spec.ts" errors="0" failures="1" skipped="0" timestamp="2025-05-07T14:45:44" time="14.453" tests="12">
-    <testcase classname="categories" name="GET categories" time="1.648">
-    </testcase>
-    <testcase classname="categories › POST create a new category" name="Create a new category" time="1.008">
-    </testcase>
-    <testcase classname="categories › POST create a new category" name="Schema verification - Name is a mandatory field" time="0.471">
-    </testcase>
-    <testcase classname="categories › POST create a new category" name="Schema verification - Name with 2 symbols validation - Valid check" time="0.564">
+    <testcase classname="brands › POST create a new brand" name="Schema verification - Name with 2 symbols validation - Valid check" time="0.478">
       <failure>Error: expect(received).toBe(expected) // Object.is equality
 
 Expected: 200
 Received: 422
-    at /Users/ihor/Desktop/api_automation/specs/categories.spec.ts:97:31
+    at /Users/ihor/Desktop/api_automation/specs/brands.spec.ts:106:31
     at Generator.next (&lt;anonymous&gt;)
-    at fulfilled (/Users/ihor/Desktop/api_automation/specs/categories.spec.ts:5:58)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/brands.spec.ts:5:58)
     at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Schema verification - Name with 1 symbol validation - test failed" time="0.484">
+    <testcase classname="brands › POST create a new brand" name="Schema verification - Name with 1 symbol validation - test failed" time="0.378">
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Duplicate category entries are not allowed" time="1.725">
+    <testcase classname="brands › POST create a new brand" name="Duplicate brand entries are not allowed" time="0.464">
     </testcase>
-    <testcase classname="categories" name="GET category/:id" time="0.468">
+    <testcase classname="brands › POST create a new brand" name="Business logic - GET /brands/invalidId will throw an error" time="0.376">
     </testcase>
-    <testcase classname="categories › PUT update category information" name="Update category name" time="0.567">
+    <testcase classname="brands › POST create a new brand" name="Business logic - GET /brands/incorrect_id will throw an error" time="0.471">
     </testcase>
-    <testcase classname="categories › PUT update category information" name="PUT check name validation on 30 symbols are allowed" time="0.568">
+    <testcase classname="brands › POST create a new brand" name="POST Brand description must be a string" time="0.371">
     </testcase>
-    <testcase classname="categories › PUT update category information" name="PUT check name validation on 31 symbols are not allowed" time="0.468">
+    <testcase classname="brands" name="GET brand/:id" time="0.465">
     </testcase>
-    <testcase classname="categories › PUT update category information" name="PUT An error is shown when updating invalid category" time="0.467">
+    <testcase classname="brands › PUT update brand information" name="PUT" time="0.575">
     </testcase>
-    <testcase classname="categories › DELETE category" name="DELETE invalid category by invalid categoryId" time="0.485">
+    <testcase classname="brands › PUT update brand information" name="PUT check name validation on 30 symbols are allowed" time="0.664">
+    </testcase>
+    <testcase classname="brands › PUT update brand information" name="PUT check name validation on 31 symbols are not allowed" time="0.371">
+    </testcase>
+    <testcase classname="brands › PUT update brand information" name="PUT An error is shown when updating invalid brand" time="0.473">
     </testcase>
   </testsuite>
 </testsuites>
