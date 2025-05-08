@@ -24,15 +24,6 @@
     "supertest": "^7.1.0",
     "ts-jest": "^29.3.2"
   },
-  "jest-junit": {
-    "outputDirectory": "./test-results",
-    "outputName": "junit.xml",
-    "ancestorSeparator": " › ",
-    "uniqueOutputName": "false",
-    "suiteNameTemplate": "{filepath}",
-    "classNameTemplate": "{classname}",
-    "titleTemplate": "{title}"
-  },
   "jest-html-reporter": {
     "pageTitle": "Test Report",
     "outputPath": "./reports/html_reports/test-report.html",

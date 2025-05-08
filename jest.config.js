@@ -9,7 +9,7 @@ module.exports = {
     [
       "jest-junit",
       {
-        outputDirectory: "./reports/junit",
+        outputDirectory: "./test-results", // 👈 MATCH THIS TO JENKINS
         outputName: "junit.xml",
         suiteName: "jest tests",
         classNameTemplate: "{classname}-{title}",

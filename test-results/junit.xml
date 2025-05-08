@@ -1,29 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="12" failures="0" errors="0" time="13.421">
-  <testsuite name="specs/categories.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-07T13:51:02" time="13.051" tests="12">
-    <testcase classname="categories" name="GET categories" time="1.543">
+<testsuites name="jest tests" tests="39" failures="3" errors="0" time="21.458">
+  <testsuite name="specs/upload.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-08T13:39:03" time="9.39" tests="2">
+    <testcase classname="Upload single file-POST /upload/single" name="POST /upload/single" time="1.735">
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Create a new category" time="0.948">
+    <testcase classname="Upload single file-POST /upload/multiple" name="POST /upload/multiple" time="1.735">
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Schema verification - Name is a mandatory field" time="0.476">
+  </testsuite>
+  <testsuite name="specs/poc.spec.ts" errors="0" failures="3" skipped="0" timestamp="2025-05-08T13:39:03" time="9.913" tests="11">
+    <testcase classname="POC Tests › GET-GET /posts should return valid posts data" name="GET /posts should return valid posts data" time="0.315">
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Schema verification - Name with 2 symbols validation - Valid check" time="1.283">
+    <testcase classname="POC Tests › GET-GET /posts with query parameters" name="GET /posts with query parameters" time="0.105">
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Schema verification - Name with 1 symbol validation - test failed" time="0.472">
+    <testcase classname="POC Tests › GET-GET /posts/:id should return specific post" name="GET /posts/:id should return specific post" time="0.097">
     </testcase>
-    <testcase classname="categories › POST create a new category" name="Duplicate category entries are not allowed" time="1.717">
+    <testcase classname="POC Tests › GET-GET /comments with pagination" name="GET /comments with pagination" time="0.107">
     </testcase>
-    <testcase classname="categories" name="GET category/:id" time="0.464">
+    <testcase classname="POC Tests › POST-POST /posts should create new post" name="POST /posts should create new post" time="0.43">
     </testcase>
-    <testcase classname="categories › PUT update category information" name="Update category name" time="0.589">
+    <testcase classname="POC Tests › POST-POST /posts with invalid data should fail" name="POST /posts with invalid data should fail" time="0.768">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 400
+Received: 201
+    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:89:37
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
     </testcase>
-    <testcase classname="categories › PUT update category information" name="PUT check name validation on 30 symbols are allowed" time="0.652">
+    <testcase classname="POC Tests › PUT-PUT /posts/:id should update post" name="PUT /posts/:id should update post" time="0.482">
     </testcase>
-    <testcase classname="categories › PUT update category information" name="PUT check name validation on 31 symbols are not allowed" time="0.472">
+    <testcase classname="POC Tests › PUT-PUT /posts/:id with non-existent id should fail" name="PUT /posts/:id with non-existent id should fail" time="0.474">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 500
+    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:118:37
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
     </testcase>
-    <testcase classname="categories › PUT update category information" name="PUT An error is shown when updating invalid category" time="0.483">
+    <testcase classname="POC Tests › DELETE-DELETE /posts/:id should delete post" name="DELETE /posts/:id should delete post" time="0.551">
     </testcase>
-    <testcase classname="categories › DELETE category" name="DELETE invalid category by invalid categoryId" time="0.47">
+    <testcase classname="POC Tests › DELETE-DELETE /posts/:id with non-existent id should fail" name="DELETE /posts/:id with non-existent id should fail" time="0.413">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+    at /Users/ihor/Desktop/api_automation/specs/poc.spec.ts:134:37
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/ihor/Desktop/api_automation/specs/poc.spec.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="POC Tests › PATCH-PATCH /posts/:id should partially update post" name="PATCH /posts/:id should partially update post" time="0.208">
+    </testcase>
+  </testsuite>
+  <testsuite name="specs/brands.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-08T13:39:03" time="17.091" tests="14">
+    <testcase classname="brands-GET brands" name="GET brands" time="3.761">
+    </testcase>
+    <testcase classname="brands › POST create a new brand › Create brands-Create a new brand" name="Create a new brand" time="0.48">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-Schema verification - Name is a mandatory field" name="Schema verification - Name is a mandatory field" time="0.368">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-Schema verification - Name with 2 symbols validation - Valid check" name="Schema verification - Name with 2 symbols validation - Valid check" time="0.482">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-Schema verification - Name with 1 symbol validation - test failed" name="Schema verification - Name with 1 symbol validation - test failed" time="0.373">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-Duplicate brand entries are not allowed" name="Duplicate brand entries are not allowed" time="0.473">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-Business logic - GET /brands/invalidId will throw an error" name="Business logic - GET /brands/invalidId will throw an error" time="0.387">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-Business logic - GET /brands/incorrect_id will throw an error" name="Business logic - GET /brands/incorrect_id will throw an error" time="0.47">
+    </testcase>
+    <testcase classname="brands › POST create a new brand-POST Brand description must be a string" name="POST Brand description must be a string" time="0.384">
+    </testcase>
+    <testcase classname="brands-GET brand/:id" name="GET brand/:id" time="0.522">
+    </testcase>
+    <testcase classname="brands › PUT update brand information-PUT" name="PUT" time="0.576">
+    </testcase>
+    <testcase classname="brands › PUT update brand information-PUT check name validation on 30 symbols are allowed" name="PUT check name validation on 30 symbols are allowed" time="0.591">
+    </testcase>
+    <testcase classname="brands › PUT update brand information-PUT check name validation on 31 symbols are not allowed" name="PUT check name validation on 31 symbols are not allowed" time="0.383">
+    </testcase>
+    <testcase classname="brands › PUT update brand information-PUT An error is shown when updating invalid brand" name="PUT An error is shown when updating invalid brand" time="0.542">
+    </testcase>
+  </testsuite>
+  <testsuite name="specs/categories.spec.ts" errors="0" failures="0" skipped="0" timestamp="2025-05-08T13:39:03" time="19.531" tests="12">
+    <testcase classname="categories-GET categories" name="GET categories" time="2.347">
+    </testcase>
+    <testcase classname="categories › POST create a new category-Create a new category" name="Create a new category" time="0.943">
+    </testcase>
+    <testcase classname="categories › POST create a new category-Schema verification - Name is a mandatory field" name="Schema verification - Name is a mandatory field" time="0.474">
+    </testcase>
+    <testcase classname="categories › POST create a new category-Schema verification - Name with 2 symbols validation - Valid check" name="Schema verification - Name with 2 symbols validation - Valid check" time="0.944">
+    </testcase>
+    <testcase classname="categories › POST create a new category-Schema verification - Name with 1 symbol validation - test failed" name="Schema verification - Name with 1 symbol validation - test failed" time="0.469">
+    </testcase>
+    <testcase classname="categories › POST create a new category-Duplicate category entries are not allowed" name="Duplicate category entries are not allowed" time="1.819">
+    </testcase>
+    <testcase classname="categories-GET category/:id" name="GET category/:id" time="0.493">
+    </testcase>
+    <testcase classname="categories › PUT update category information-Update category name" name="Update category name" time="0.58">
+    </testcase>
+    <testcase classname="categories › PUT update category information-PUT check name validation on 30 symbols are allowed" name="PUT check name validation on 30 symbols are allowed" time="0.566">
+    </testcase>
+    <testcase classname="categories › PUT update category information-PUT check name validation on 31 symbols are not allowed" name="PUT check name validation on 31 symbols are not allowed" time="0.691">
+    </testcase>
+    <testcase classname="categories › PUT update category information-PUT An error is shown when updating invalid category" name="PUT An error is shown when updating invalid category" time="1.109">
+    </testcase>
+    <testcase classname="categories › DELETE category-DELETE invalid category by invalid categoryId" name="DELETE invalid category by invalid categoryId" time="1.108">
     </testcase>
   </testsuite>
 </testsuites>
